@@ -29,21 +29,21 @@ const typeAdvantages = {
 };
 
 const colors = {
-    fire: "#FDDFDF",
-    grass: "#DEFDE0",
-    electric: "#FCF7DE",
-    water: "#DEF3FD",
-    ground: "#f4e7da",
-    rock: "#d5d5d4",
-    fairy: "#fceaff",
-    poison: "#d6b3ff",
-    bug: "#f8d5a3",
-    dragon: "#97b3e6",
-    psychic: "#eaeda1",
-    flying: "#F5F5F5",
-    fighting: "#E6E0D4",
-    normal: "#F5F5F5",
-    ice: "#e0f5ff ",
+    Fire: "#FDDFDF",
+    Grass: "#DEFDE0",
+    Electric: "#FCF7DE",
+    Water: "#DEF3FD",
+    Ground: "#f4e7da",
+    Rock: "#d5d5d4",
+    Fairy: "#fceaff",
+    Poison: "#d6b3ff",
+    Bug: "#f8d5a3",
+    Dragon: "#97b3e6",
+    Psychic: "#eaeda1",
+    Flying: "#F5F5F5",
+    Fighting: "#E6E0D4",
+    Normal: "#F5F5F5",
+    Ice: "#e0f5ff ",
 }
 
 
