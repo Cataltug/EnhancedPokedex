@@ -25,7 +25,7 @@
 
 ### How to Use
 - Clone this repository to your local machine:
-- git clone https://github.com/Cataltug/Pomodoro-Timer.git
+- git clone https://github.com/Cataltug/EnhancedPokedex
 - Open the app in your browser.
 - Search and filter Pokémon using the input box and dropdown menu.
 - Select two Pokémon and click on "Start Battle" to initiate the PvP battle.
