@@ -28,7 +28,7 @@ const typeAdvantages = {
     fairy: { strongAgainst: ["fighting", "dragon", "dark"], weakAgainst: ["fire", "poison", "steel"] }
 };
 
-const colors = {
+const colors = { // Background colors for different Pokémon types
     Fire: "#FDDFDF",
     Grass: "#DEFDE0",
     Electric: "#FCF7DE",
@@ -53,7 +53,7 @@ const initPokemon = async () => {
     }
 };
 
-const getPokemon = async (id) => {
+const getPokemon = async (id) => { // Fetch Pokémon data from API
     let url = `https://pokeapi.co/api/v2/pokemon/${id}`
     let res = await fetch(url);
     let data = await res.json();
@@ -99,7 +99,7 @@ const createPokemonBox = (pokemon) => {
 
 };
 
-function filterPokemon() {
+function filterPokemon() { // filter Pokémon based on search input and selected type
     const search = searchInput.value.toLowerCase();
     const selectedType = typeFilter.value.toLowerCase();
     const pokeBoxes = document.querySelectorAll(".poke-box");
@@ -124,7 +124,7 @@ function filterPokemon() {
 searchInput.addEventListener("input", filterPokemon);
 typeFilter.addEventListener("change", filterPokemon);
 
-function startBattle() {
+function startBattle() { // Function to start the Pokémon battle between two selected Pokémon
     if (selectedPokemons.length !== 2) {
         alert("Please select *2* Pokémons!");
         return;
@@ -160,12 +160,12 @@ function startBattle() {
     } else if (typeAdvantages[type2]?.immuneTo.includes(type1)) {
         attackPower2 = 0;
     }
-
+    // Calculate remaining HP after attack
     let hpRemaining1 = hp1 - attackPower2;
     let hpRemaining2 = hp2 - attackPower1;
 
     let resultMessage = "";
-
+    // Determine battle result
     if (hpRemaining1 > hpRemaining2) {
         resultMessage = `${name1} Wins!`;
     } else if (hpRemaining2 > hpRemaining1) {
@@ -173,13 +173,13 @@ function startBattle() {
     } else if (hpRemaining1 === hpRemaining2) {
         resultMessage = "It's a Draw!";
     }
+    
+    document.querySelector(".battle-result").innerText = resultMessage; // Display battle result
 
-    document.querySelector(".battle-result").innerText = resultMessage;
-
-    selectedPokemons.forEach(p => p.classList.remove("selected"));
+    selectedPokemons.forEach(p => p.classList.remove("selected")); // Reset selected Pokémon
     selectedPokemons = [];
 }
 
 
-initPokemon();
+initPokemon(); // Initialize Pokémon data from API
 
